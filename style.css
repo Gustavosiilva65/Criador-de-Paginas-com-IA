@@ -1,0 +1,118 @@
+/* Boas praticas - comece pelo (tudo)
+reset CSS( igualar tudo)
+
+1- margin ( distancia externa)
+2- padding ( distancia interna)
+3- box-sizing ( como o navegador calcula o tamanho do elemento) */ 
+/*4- box-sizing ( como o navegador calcula o tamanho do elemento) */ 
+/* Abaixo usar em todas a aplicações, para evitar que o navegador calcule o tamanho do elemento de forma diferente, e para evitar que o padding e a borda sejam somados ao tamanho do elemento, o que pode causar problemas de layout. */
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box; 
+    font-family: "inter", sans-serif; /* Fonte do site */
+
+}
+/* Cores 2 formatos
+1- nome da cor
+2- o codigo da cor */
+body{
+    background:#09090b;; /* Cor de fundo do site */
+    color: #fafafa; /* Cor do texto */
+    padding: 60px 20px;    /* distancia interna do body, 60px em cima e em baixo, 20px nas laterais */
+    display: flex; /* transformar o body em um container flexível */
+    flex-direction: column; /* um debaixo do outro */
+    align-items: center; /* centralizar os itens */
+}
+
+.etiqueta {
+
+    color: #ffffff
+}
+
+
+h1 { 
+    font-size: 52px; /* Tamanho da fonte do titulo */
+    font-weight: 800; /* Grosso do texto */
+    color: #fafafa; /* Cor do titulo */
+
+
+}
+
+span {
+    color: #a78bfa; /* Cor do texto do span */
+}
+
+.Subtitulo{
+    color: #71717a; /* Cor do subtitulo */
+    margin-top: 16px;
+    font-size: 18px; /* Tamanho da fonte do subtitulo */
+
+}
+
+.caixa_entrada {
+    width: 620px;/* Largura da caixa de entrada */
+    background: #141419; /* Cor de fundo da caixa de entrada */
+    border-radius: 16px; /* Borda arredondada da caixa de entrada */
+    padding: 12px;/* Distancia interna da caixa de entrada */
+    margin-top: 30px;/* Distancia entre a caixa de entrada e o subtitulo */
+    display: flex; /* Transformar a caixa de entrada em um container flexível */
+}
+
+textarea{
+    
+    width: 80%; /* Largura da caixa de texto */
+    resize: none; /* Impede que o usuário redimensione a caixa de texto */
+    outline: none; /* Remove a borda de foco padrão */
+    background: transparent; /* Fundo transparente para combinar com o design do site */
+    padding: 8px;   /* Distancia interna da caixa de texto */
+    color: #fafafa;/* Cor do texto da caixa de texto */
+    font-size: 15px;/* Tamanho da fonte da caixa de texto */
+    border:none;  /* Remove a borda da caixa de texto */
+}
+
+
+button {
+    width: 20%;/* Largura do botão */
+    padding: 10px 24px;
+    color: #ffffff;/* Cor do texto do botão */
+    background: #7c3aed;/* Cor de fundo do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 10px;/* Borda arredondada */
+    cursor:pointer;/* Cursor pointer para indicar que é clicável */
+    font-weight: 600; /* Grosso do texto do botão */
+}
+
+.caixa_resultado{ 
+    width: 1400px; /* Largura do resultado */
+    display: flex; /* Transformar o resultado em um container flexível */
+    margin-top: 40px; /* Distancia entre o resultado e a caixa de entrada */
+    padding: 24px;
+    margin-top: 40px; /* Distancia entre o resultado e a caixa de entrada */
+     background: #111114;  /* Cor de fundo do resultado */
+     border-radius: 12px; /* Borda arredondada do resultado */
+     border: 1px solid #27212a; /* Borda do resultado */
+     gap: 24px; /* Distancia entre o bloco de código e o bloco do site */
+}
+
+.bloco-codigo{
+    width: 30%;/* Largura do bloco de código */
+   background: #0c0c0f; /* Cor de fundo do bloco de código */
+   padding: 20px;  /*  Distancia interna do bloco de código */
+   font-size: 12px ; /* Tamanho da fonte do bloco de código */
+   color: #22c55e;
+   white-space: pre-wrap; /* Preserva os espaços em branco e as quebras de linha no código */
+   overflow:auto; /* Adiciona uma barra de rolagem se o conteúdo do código ultrapassar a altura do bloco */
+    height: 600px; /* Altura do bloco de código */
+    border-radius: 12px; /* Borda arredondada do bloco de código */
+    border: 1px solid #27212a; /* Borda do bloco de código */
+}
+
+
+.bloco-site{
+    width: 70%; /* Largura do bloco do site */  
+    height: 600px; /* Altura do bloco do site */
+    border: 1px solid #27212a; /* Borda do bloco do site */
+    border-radius: 12px; /* Borda arredondada do bloco do site */
+    background-color: #1e1e1e; /* Cor de fundo do bloco do site */
+}
