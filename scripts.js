@@ -21,16 +21,41 @@ Algoritmo - Receita de BOLO
 
 let endereco = "https://api.groq.com/openai/v1/chat/completions"
 
+    let prompt =  `Você e um designer web premiado e programador.
+            Regras de resposta : 
+            - responda somente com o código html e css puros
+            - não use crases, markdown ou explicações
+            - não use tags de <img> ou <script>
+
+            Indentidade visual (capriche e supreenda) : 
+
+            - invente uma paleta de cores unica que combine com a essencia do site
+            - escolha uma google font marcante via @import
+            - use emojis grandes no lugar de imagens
+            - use css moderno: gradientes, sombras, animações, sutis, layout generoso, tipogradia grande e impactante
+            
+            Estrutura do site : 
+            - header com um titulo e um subtitulo
+            - header com noeme do negocio e slogan
+            - seção de serviços com 3 cards, cada um com um emoji, um titulo e uma descrição
+            - secãõ de diferencias com emojis 
+            - depoimentos de clientes, cada um com um emoji, uma frase e o nome do cliente
+            - footer com informações de contato e redes sociais
+
+            
+Conteudo em português, seja criativo e surpreenda, e especifico para negocios.`
+
+
+
 async function gerarcodigo() {
 
-    let textarea = document.querySelector (".texto_pagina").value/* Seleciona o elemento textarea onde o usuário insere a descrição do negócio. */ 
-
+    let textarea = document.querySelector (".texto_pagina").value
     let resposta = await fetch(endereco, {
 
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            "Authorization": "Escreva sua chave de API aqui" /* Substitua "Escreva sua chave de API aqui" pela sua chave de API real para autenticar a solicitação. */
+            "Authorization": /* Substitua "Escreva sua chave de API aqui" pela sua chave de API real para autenticar a solicitação. */
         }, 
             
         body: JSON.stringify({
@@ -47,8 +72,8 @@ async function gerarcodigo() {
                 {
 
                     "role": "system",
-                    "content": "Você é um Programador. Você recebe uma tema de negócio e cria uma pagina com HTML e CSS. Responda apenas com código. A pagina é em Portugues do Brasil"
-                }
+                    "content": prompt, 
+                }  
             ],
         })
     })
